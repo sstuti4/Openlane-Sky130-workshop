@@ -1,2 +1,2 @@
 # Openlane-Sky130-workshop
-Advanced Physical Design workshop using OpenLANE/Sky130
+An informative workshop on advanced Physical Design using OpenLANE/Sky130 organized by VSD Corp. It helped me gain hands-on experience to perform full ASIC implementation steps from RTL to GDSII using open source tools. The workshop focussed on building basics of PnR flow by imparting exposure to conceptual as well as practical learning. Tools used: Magic, ngspice, OpenSTA, TritonRoute and OpenLANE.   
