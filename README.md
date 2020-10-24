@@ -50,22 +50,22 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
    
    # LAB
    
-   **To run OpenLANE**
+   * **To run OpenLANE**
    
    
  ![Openlane_run](https://user-images.githubusercontent.com/73339656/97085677-934bcf80-163c-11eb-89c2-cb054708c198.png)
  
  
  
- **Result of synthesis showing design components**
+ * **Result of synthesis showing design components**
  
  ![Screenshot from 2020-10-24 22-03-37](https://user-images.githubusercontent.com/73339656/97087240-3c4af800-1646-11eb-878a-e81992fa1fee.png)
  
 
 
-**Slack of design**
+* **Slack Calculation of design**
  
- ![screenshot_1](https://user-images.githubusercontent.com/73339656/97088071-24767280-164c-11eb-96c0-850996ba4360.png)
+ ![screenshot_1](https://user-images.githubusercontent.com/73339656/97088964-0a3f9300-1652-11eb-8ca9-6bb3c6348e0f.png)
    
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
@@ -111,7 +111,19 @@ Routing method finds out best possible pattern for connection between two end po
 
 These DRC rules exist because of limitations of the Lithography technique. Deviation takes place in lithography leading to changes which might lead to an unintended open circuit or short circuit and to avoid this the DRC rules are fixed. Another DRC Violation type is Signal short which can be dealt by changing layers. 
 
+**Routing Technique Classified into**
+* **Global Route** : Performed using fast route. In this step route guides are formed.
+* **Detailed Route** : Performed using *TritonRoute*. 
 
+**Triton Route**
+It performs *initial detailed route* and tries to route within the route guide provided by fast route. It works on MILF-based panel routing with intra-layer parellel route and inter-layer sequential route technique. Input files required for triton route are LEF,DEF and preprocessed route guide. Output is in form of detailed routing with optimum wire length and Via count.
+
+* **Steps for preprocessed route guides**
+* Initial route guide
+* Splitting
+* Merging
+* Bridging
+* Preprocessed Route
 
 # LAB
 
