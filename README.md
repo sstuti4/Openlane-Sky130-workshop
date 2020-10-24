@@ -50,9 +50,9 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
    
    # LAB
    
-   ** To run OpenLANE**
+   **To run OpenLANE**
+ ![Openlane_run](https://user-images.githubusercontent.com/73339656/97085677-934bcf80-163c-11eb-89c2-cb054708c198.png)
    
-   ![Openlane_run](https://user-images.githubusercontent.com/73339656/97084069-07cd4100-1632-11eb-88ed-2b30db19f669.jpg)
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
 
