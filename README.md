@@ -52,8 +52,7 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
    
    ** To run OpenLANE**
    
-![Openlane_run](https://user-images.githubusercontent.com/73339656/97084069-07cd4100-1632-11eb-88ed-2b30db19f669.jpg)
-   
+   https://raw.githubusercontent.com/sstuti4/Openlane-Sky130-workshop/main/Openlane_run.jpg
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
 
