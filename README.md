@@ -53,13 +53,14 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
    * **To run OpenLANE**
    
    
- ![Openlane_run](https://user-images.githubusercontent.com/73339656/97085677-934bcf80-163c-11eb-89c2-cb054708c198.png)
+![Screenshot (19)](https://user-images.githubusercontent.com/73339656/97091831-5e4f7500-165c-11eb-9f42-7883403cfcf4.png)
+
  
  
  
  * **Result of synthesis showing design components**
  
- ![Screenshot from 2020-10-24 22-03-37](https://user-images.githubusercontent.com/73339656/97087240-3c4af800-1646-11eb-878a-e81992fa1fee.png)
+![Screenshot (20)](https://user-images.githubusercontent.com/73339656/97091954-55ab6e80-165d-11eb-86bd-ba674f8e6b72.png)
  
 
 
