@@ -43,11 +43,37 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
    
    **5. Signal Routing** : In routing, valid horizontal and vertical pattern of wires found to implement nets connecting cells together. *Global route* generates route guides on the basis of which *detailed route* is performed.  
    
-   **6. Sign-off** : In sign-off stage *Physical verification* done with the help of DRC & LVS and *timing verification* carried out with static timing analysis. 
+   **6. Sign-off** : In sign-off stage *Physical verification* done with the help of DRC & LVS and *Timing verification* carried out with static timing analysis. 
    
-   Concepts like design exploration and Antenna diode were discussed. For adding new design or update in flow tools, reconfiguration for design is needed. **Design exploration** helps in finding best configuration for design. **Antenna Diode** problem arises for long nets which is avoided by using fake antenna diodes next to every cell after placement. Later Antenna Checker (Magic) is run. If it reports antenna violations then fake diode replaced by actual one. 
+   
+   Concepts like design exploration and Antenna diode were discussed. For adding new design or update in flow tools, reconfiguration for design is needed. **Design exploration** helps in finding best configuration for design. Command to run it. **Antenna Diode** problem arises for long nets which is avoided by using fake antenna diodes next to every cell after placement. Later Antenna Checker (Magic) is run. If it reports antenna violations then fake diode replaced by actual one. 
+   
+   # LAB
+   
+   ** To run OpenLANE**
+   
+
+   
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
+
+On Day 2, definition of width and height of core and die. Factors like *Utilization factor* and *Aspect ratio* important to understand a design were introduced and their effects were discussed. Steps involved to define location of *pre-placed cell*  & it's advantage of enhacing reusability and *de-coupling capacitors*  and how they help during switching to avoid failure explained. A fully charged De-coupling cap placed paralllel to circuits to ensure proper supply of peak current *Ipeak* by decoupling them from main supply voltage. Hence de-coupling cap ensures *proper local communication* while multiple Vdd & Vss lines lead to *proper global communication* avoiding voltage droop and ground bounce conditions. Step of placing *logical cell placement blockage* to avoid PnR tool to place anything.   
+
+**Characterization**
+
+Input information required by Characterization softwares are PDKs, DRC & LVS rules and spice models. The design steps of it involve *Circuit Design* and *Layout design* characterization. The software GUNA used for characterization. The characterization can be classified as Timing characterization, Power characterization and Noise characterization.
+
+**Steps involved in Characterization**
+
+* Model file of CMOS containing basic property defitions.
+* Read extracted Spice Netlist
+* Recognize the behavior of cell
+* Read the subcircuits
+* Attact the power sources
+* Apply input or stimulus
+* Provide necessary output capacitance
+* Provide necessary simulation commands
+
 
 # 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
 
