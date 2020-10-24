@@ -33,17 +33,19 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
 
 **Simplified RTL to GDS Flow**
   
-   **1. Synthesis** :
+   **1. Synthesis** : Synthesis is process of converting RTL (Synthesizable Verilog code) to technology specific gate level netlist. Standard cell library and technology related information acts as input for it.
    
-   **2. Floorplan & Power Planning**
+   **2. Floorplan & Power Planning** : The floorplan is the process of determining the dimensions, macro placement, power grid generation and pin placement. Power is provided to components with the help of power straps, power rings and power pads. Power planning helps tp reduce resistance and in addressing problems like electromigration.
    
-   **3. Placement** :
+   **3. Placement** : Placement steps helps reduce interconnect delays and enable successful route. Firstly ***global placement*** is performed which finds optimum positions for cells. Then with the help of the global placement results detailed placement takes place. ***Detailed placement*** ensures minimally altered and close to required placement.
    
-   **4. Clock Tree Synthesis** :
+   **4. Clock Tree Synthesis** : This step is used to route clock signal. It is important that clock signal routing takes place before signal routing, as clock signal help ensure valid data signal transmission.
    
-   **5. Signal Routing** :
+   **5. Signal Routing** : In routing, valid horizontal and vertical pattern of wires found to implement nets connecting cells together. *Global route* generates route guides on the basis of which *detailed route* is performed.  
    
-   **6. Sign-off** :
+   **6. Sign-off** : In sign-off stage *Physical verification* done with the help of DRC & LVS and *timing verification* carried out with static timing analysis. 
+   
+   Concepts like design exploration and Antenna diode were discussed. For adding new design or update in flow tools, reconfiguration for design is needed. **Design exploration** helps in finding best configuration for design. **Antenna Diode** problem arises for long nets which is avoided by using fake antenna diodes next to every cell after placement. Later Antenna Checker (Magic) is run. If it reports antenna violations then fake diode replaced by actual one. 
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
 
