@@ -131,6 +131,10 @@ It performs *initial detailed route* and tries to route within the route guide p
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/73339656/97088698-58539700-1650-11eb-9f81-d773c09df730.png)
 
+**SPEF Extraction**
+
+![Screenshot (18)](https://user-images.githubusercontent.com/73339656/97091405-5a6e2380-1659-11eb-8df4-bde2e06fb572.png)
+
 # 7. Acknowledgements
   * Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 
