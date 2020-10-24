@@ -95,8 +95,7 @@ Input information required by Characterization softwares are PDKs, DRC & LVS rul
 
 **Layout of Design using Magic tool**
 
-![Screenshot (6)](https://user-images.githubusercontent.com/73339656/97092597-d1f48080-1662-11eb-9504-711b6cd864ef.png) ![Screenshot (21)](https://user-images.githubusercontent.com/73339656/97092292-9ce72e80-1660-11eb-8457-98453fa36f18.png) 
-
+![Screenshot (6)](https://user-images.githubusercontent.com/73339656/97092597-d1f48080-1662-11eb-9504-711b6cd864ef.png) 
 
 
 # 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
