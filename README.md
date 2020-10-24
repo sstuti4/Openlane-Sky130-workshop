@@ -51,7 +51,21 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
    # LAB
    
    **To run OpenLANE**
+   
+   
  ![Openlane_run](https://user-images.githubusercontent.com/73339656/97085677-934bcf80-163c-11eb-89c2-cb054708c198.png)
+ 
+ 
+ 
+ **Result of synthesis showing design components**
+ 
+ ![Screenshot from 2020-10-24 22-03-37](https://user-images.githubusercontent.com/73339656/97087240-3c4af800-1646-11eb-878a-e81992fa1fee.png)
+ 
+
+
+**Slack of design**
+ 
+ ![screenshot_1](https://user-images.githubusercontent.com/73339656/97088071-24767280-164c-11eb-96c0-850996ba4360.png)
    
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
@@ -62,9 +76,9 @@ On Day 2, definition of width and height of core and die. Factors like *Utilizat
 
 Input information required by Characterization softwares are PDKs, DRC & LVS rules and spice models. The design steps of it involve *Circuit Design* and *Layout design* characterization. The software GUNA used for characterization. The characterization can be classified as Timing characterization, Power characterization and Noise characterization.
 
-**Steps involved in Characterization**
+**Characterization flow steps**
 
-* Model file of CMOS containing basic property defitions.
+* Model file of CMOS containing basic property definitions
 * Read extracted Spice Netlist
 * Recognize the behavior of cell
 * Read the subcircuits
@@ -73,12 +87,37 @@ Input information required by Characterization softwares are PDKs, DRC & LVS rul
 * Provide necessary output capacitance
 * Provide necessary simulation commands
 
+# LAB
+
+
+
 
 # 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
 
+
+
 # 5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity
 
+
+
 # 6. Day 5: Routing and SPEF Extraction
+
+Routing method finds out best possible pattern for connection between two end points, of which one point is *target node* while the other is *source node*. **Maze Routing-Lee's Algorithm** was introduced. In this technique firstly routing grids are created and source & target nodes are indentified. Then the blocks adjacent to one under consideration are assigned same numbers and this process is repeated till we reach the target node. Once this done the pattern with minimum number of turns preferably a *l* spaced pattern is finalised for route. 
+
+**Typical DRC rules for pair of wires**
+1. Wire width
+2. Wire pitch 
+3. Wire Spacing
+
+These DRC rules exist because of limitations of the Lithography technique. Deviation takes place in lithography leading to changes which might lead to an unintended open circuit or short circuit and to avoid this the DRC rules are fixed. Another DRC Violation type is Signal short which can be dealt by changing layers. 
+
+
+
+# LAB
+
+**Routing Result of Design**
+
+![Screenshot (16)](https://user-images.githubusercontent.com/73339656/97088698-58539700-1650-11eb-9f81-d773c09df730.png)
 
 # 7. Acknowledgements
   * Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
