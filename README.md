@@ -57,7 +57,6 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
 
  
  
- 
  * **Result of synthesis showing design components**
  
 ![Screenshot (20)](https://user-images.githubusercontent.com/73339656/97091954-55ab6e80-165d-11eb-86bd-ba674f8e6b72.png)
@@ -90,6 +89,13 @@ Input information required by Characterization softwares are PDKs, DRC & LVS rul
 
 # LAB
 
+**Floorplan Result**
+
+![Screenshot (22)](https://user-images.githubusercontent.com/73339656/97092549-75916100-1662-11eb-984d-7ab7e8908010.png)
+
+**Layout of Design using Magic tool**
+
+![Screenshot (6)](https://user-images.githubusercontent.com/73339656/97092597-d1f48080-1662-11eb-9504-711b6cd864ef.png) ![Screenshot (21)](https://user-images.githubusercontent.com/73339656/97092292-9ce72e80-1660-11eb-8457-98453fa36f18.png) 
 
 
 
