@@ -132,6 +132,10 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 
 # 5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity
 
+Topic of Delay tables explored on Day 5. I learned that delay and output transition values of any particular cell are calculated with the help of values of *input transition* and *output load* values. Delay table and output transition table of a cell contain different value for each combination of input trans and output load, represented in form of lookup tables in liberty file. With the help of interpolation and extrapolation the values of point in range can also be calculated for precise result.  
+
+ADD SETUP/HOLD
+
 # LAB
 
 **sky130_fd_sc_hd File containing layer information of Cell**
@@ -153,6 +157,17 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 
 
 ![Screenshot (34)](https://user-images.githubusercontent.com/73339656/97116204-b308f380-1721-11eb-926d-f383af26a949.png)
+
+![Screenshot (37)](https://user-images.githubusercontent.com/73339656/97117154-e9e20800-1727-11eb-8667-babaa596cc10.png)
+
+![Screenshot (38)](https://user-images.githubusercontent.com/73339656/97117167-f6666080-1727-11eb-9fed-aa4d1fa00399.png)
+
+**CTS Step Result**
+
+![Screenshot (40)](https://user-images.githubusercontent.com/73339656/97117697-80fc8f00-172b-11eb-8982-bdce6ec6afe2.png)
+
+**Clock Buffer List of design**
+![Screenshot (41)](https://user-images.githubusercontent.com/73339656/97117700-8659d980-172b-11eb-8aee-4cc578cf0f5e.png)
 
 
 # 6. Day 5: Routing and SPEF Extraction
