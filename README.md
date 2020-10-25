@@ -12,7 +12,7 @@ An informative workshop on advanced Physical Design using OpenLANE/Sky130 organi
 # 1. Introduction to OpenLANE
 OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, SPEF-Extractor and custom methodology scripts for design exploration and optimization. It is a tool started for true open source tape-out experience and comes with APACHE version 2.0 . The goal of OpenLANE is to produce clean GDSII without any human intervention. OpenLANE is tuned for Skywater 130nm open PDK and can be used to produce hard macros and chips.
 
-* **Modes of Operation of OpenLANE**
+**Modes of Operation of OpenLANE**
 
      **1.  Autonomous Mode:**    Push buttons triggered flow.
      
@@ -50,20 +50,20 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
    
    # LAB
    
-   * **To run OpenLANE**
+   **To run OpenLANE**
    
    
 ![Screenshot (19)](https://user-images.githubusercontent.com/73339656/97091831-5e4f7500-165c-11eb-9f42-7883403cfcf4.png)
 
  
  
- * **Result of synthesis showing design components**
+ **Result of synthesis showing design components**
  
 ![Screenshot (20)](https://user-images.githubusercontent.com/73339656/97091954-55ab6e80-165d-11eb-86bd-ba674f8e6b72.png)
  
 
 
-* **Slack Calculation of design**
+**Slack Calculation of design**
  
  ![screenshot_1](https://user-images.githubusercontent.com/73339656/97088964-0a3f9300-1652-11eb-8ca9-6bb3c6348e0f.png)
    
@@ -100,7 +100,31 @@ Input information required by Characterization softwares are PDKs, DRC & LVS rul
 
 # 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
 
+OpenLANE offers an interesting feature of making changes into parameters on the go. This helps to deal with issues like congestion. SPICE deck formation contains informations like components connectivity and values and information about nodes. It was showed how W/L ratio of MOS impacts its conductivity and hence reason of carefully defining W/L ratio of MOS to ensure same *rise* and *fall* delay for clock signals. CMOS robustness defined with the help of parameters that are *Switching Threshold (Vm)*,    .Switching threshold defined by conditions  **Vgs=Vds** and **Idsp=-Idsn**. 
 
+**Important parameters of Timing Characterization**
+* **Rise Delay** : Time taken for waveform to rise from 20% to 80% of VDD.
+* **Fall Delay** : Time taken for waveform to fall from 80% to 20% of VDD.
+* **Propagation Delay** : Measured between 50% of Input transition to 50% of Output transition.
+
+**16-Mask CMOS Process Steps**
+* Substrate Selection
+* Create active region for transistors
+* Nwell & Pwell formation
+* Creating Gate terminal
+* Lightly Doped Drain (LDD) formation
+* Source and Drain formation
+* Contacts & local interconnect Creation
+* Higher Level metal layers formtion
+
+
+**NOTE** : The values shown are standard value and might change according to requirements. 
+
+# LAB
+
+**Layout of Inv using Magic**
+
+![Screenshot (24)](https://user-images.githubusercontent.com/73339656/97113874-1b9ca400-1713-11eb-90b8-dd0bf88f7c4a.png)
 
 # 5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity
 
@@ -124,7 +148,7 @@ These DRC rules exist because of limitations of the Lithography technique. Devia
 **Triton Route**
 It performs *initial detailed route* and tries to route within the route guide provided by fast route. It works on MILF-based panel routing with intra-layer parellel route and inter-layer sequential route technique. Input files required for triton route are LEF,DEF and preprocessed route guide. Output is in form of detailed routing with optimum wire length and Via count.
 
-* **Steps for preprocessed route guides**
+**Steps for preprocessed route guides**
 * Initial route guide
 * Splitting
 * Merging
