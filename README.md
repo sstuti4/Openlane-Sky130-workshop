@@ -14,9 +14,8 @@ OpenLANE is an automated RTL to GDSII flow based on several components including
 
 **Modes of Operation of OpenLANE**
 
-     **1.  Autonomous Mode:**    Push buttons triggered flow.
-     
-     **2.  Interactive Mode:**    Run commands and steps one by one.
+ **1.  Autonomous Mode:**    Push buttons triggered flow.
+ **2.  Interactive Mode:**    Run commands and steps one by one.
  
 
 # 2. Day 1: SoC Design and familiarity to open source eda tools
@@ -115,7 +114,7 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 * Lightly Doped Drain (LDD) formation
 * Source and Drain formation
 * Contacts & local interconnect Creation
-* Higher Level metal layers formtion
+* Higher Level metal layer formation
 
 
 **NOTE** : The values shown are standard value and might change according to requirements. 
@@ -126,8 +125,34 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 
 ![Screenshot (24)](https://user-images.githubusercontent.com/73339656/97113874-1b9ca400-1713-11eb-90b8-dd0bf88f7c4a.png)
 
+**Transient Analysis Plot using ngspice**
+
+![Screenshot (25)](https://user-images.githubusercontent.com/73339656/97114751-60770980-1718-11eb-877b-0396e38f764b.png)
+
+
 # 5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity
 
+# LAB
+
+**sky130_fd_sc_hd File containing layer information of Cell**
+
+![Screenshot (28)](https://user-images.githubusercontent.com/73339656/97115367-6969da00-171c-11eb-9266-37a83cfb3a83.png)
+
+**Steps to Convert Magic Layout in Standard Cell LEF**
+
+![Screenshot (29)](https://user-images.githubusercontent.com/73339656/97116187-9b316f80-1721-11eb-8990-ba28527dad30.png)
+
+
+![Screenshot (30)](https://user-images.githubusercontent.com/73339656/97116190-a1bfe700-1721-11eb-8fed-9189a3a5b419.png)
+
+
+![Screenshot (32)](https://user-images.githubusercontent.com/73339656/97116196-a71d3180-1721-11eb-997d-7db9af28c7c4.png)
+
+
+![Screenshot (33)](https://user-images.githubusercontent.com/73339656/97116200-abe1e580-1721-11eb-8aaa-a9db94561508.png)
+
+
+![Screenshot (34)](https://user-images.githubusercontent.com/73339656/97116204-b308f380-1721-11eb-926d-f383af26a949.png)
 
 
 # 6. Day 5: Routing and SPEF Extraction
