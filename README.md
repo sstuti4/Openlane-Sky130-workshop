@@ -138,8 +138,6 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 * **Higher Level metal layer formation** : Upper layers of metals deposited.
 
 
-**NOTE** : The values shown are standard value and might change according to requirements. 
-
 # LAB
 
 **Layout of Inv using Magic**
