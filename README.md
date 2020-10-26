@@ -1,5 +1,5 @@
 # Openlane-Sky130-workshop
-An informative workshop on advanced Physical Design using OpenLANE/Sky130 organized by VSD Corp. It helped me gain hands-on experience of full ASIC implementation steps from RTL to GDSII using Google-Skywater's first manufacturable open source 130nm process design kit. The workshop focused on building basics by imparting exposure to conceptual as well as practical approach.Learnings: Open source tools, Characterization of Cell, SPICE simulations, Static timing Anlaysis concepts, Commands of various OpenLANE tools, 16-mask CMOS Fabrication, Antenna Diode Concept, Decoupling Cap, Routing algorithm & Steps, Timing Characterization and familiarity with files like libs/db, LEF, DEF, SDC and SPEF. Tools used: Magic, ngspice, OpenSTA, TritonRoute, yosys, SPEF extractor and OpenROAD.   
+An informative workshop on advanced Physical Design using OpenLANE/Sky130 organized by VSD Corp. It helped me gain hands-on experience of full ASIC implementation steps from RTL to GDSII using Google-Skywater's first manufacturable open source 130nm process design kit. The workshop focused on building basics by imparting exposure to conceptual as well as practical approach. Learnings: Open source tools, Characterization of Cell, SPICE simulations, Static timing Analysis concepts, Commands of various OpenLANE tools, 16-mask CMOS Fabrication, Antenna Diode Concept, Decoupling Cap, Routing algorithm & Steps, Timing Characterization and familiarity with files like libs/db, LEF, DEF, SDC and SPEF. Tools used: Magic, ngspice, OpenSTA, TritonRoute, yosys, SPEF extractor and OpenROAD.   
 
 # Contents
 <a href="#1-Introduction-to-Openlane">1. Introduction to Openlane</a>
@@ -25,9 +25,9 @@ OpenLANE is an automated RTL to GDSII flow based on several components including
 
 # 2. Day 1: SoC Design and familiarity to open source eda tools
 
-Day 1 started with basic introduction to *System On Chip* and *RISC-V Instruction Set Architecture(ISA)*. How RISC-V flow helps in communicating to computers was expalined. In RISC-V flow, our code is converted to RISC-V ISA using compiler then implementation of  RTL takes place in Hardware Description Language (HDL) and from it to Layout form.
+Day 1 started with basic introduction to *System On Chip* and *RISC-V Instruction Set Architecture (ISA)*. How RISC-V flow helps in communicating to computers was explained. In RISC-V flow, our code is converted to RISC-V ISA using compiler then implementation of  RTL takes place in Hardware Description Language (HDL) and from it to Layout form.
 
-**Components reqired for open-source implementation of Digital ASIC Design**
+**Components required for open-source implementation of Digital ASIC Design**
 
 * **RTL IP** : Easily available on open source platforms 
 
@@ -39,7 +39,7 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
   
    **1. Synthesis** : Synthesis is process of converting RTL (Synthesizable Verilog code) to technology specific gate level netlist. Standard cell library and technology related information acts as input for it.
    
-   **2. Floorplan & Power Planning** : The floorplan is the process of determining the dimensions, macro placement, power grid generation and pin placement. Power is provided to components with the help of power straps, power rings and power pads. Power planning helps tp reduce resistance and in addressing problems like electromigration.
+   **2. Floorplan & Power Planning** : The floorplan is the process of determining the dimensions, macro placement, power grid generation and pin placement. Power is provided to components with the help of power straps, power rings and power pads. Power planning helps to reduce resistance and in addressing problems like electromigration.
    
    **3. Placement** : Placement steps helps reduce interconnect delays and enable successful route. Firstly ***global placement*** is performed which finds optimum positions for cells. Then with the help of the global placement results detailed placement takes place. ***Detailed placement*** ensures minimally altered and close to required placement.
    
@@ -74,19 +74,19 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
 
-On Day 2, definition of width and height of core and die. Factors like *Utilization factor* and *Aspect ratio* important to understand a design were introduced and their effects were discussed. Steps involved to define location of **pre-placed cell**  & it's advantage of enhacing reusability and **de-coupling capacitor**  and how they help during switching to avoid failure explained. A fully charged De-coupling cap placed paralllel to circuits to ensure proper supply of peak current *Ipeak* by decoupling them from main supply voltage. Hence de-coupling cap ensures proper *local communication* while multiple Vdd & Vss lines lead to proper *global communication* avoiding voltage droop and ground bounce conditions. Step of placing **logical cell placement blockage** to avoid PnR tool to place anything.   
+On Day 2, definition of width and height of core and die. Factors like *Utilization factor* and *Aspect ratio* important to understand a design were introduced and their effects were discussed. Steps involved to define location of **pre-placed cell**  & it's advantage of enhancing reusability and **de-coupling capacitor**  and how they help during switching to avoid failure explained. A fully charged De-coupling cap placed parallel to circuits to ensure proper supply of peak current *Ipeak* by decoupling them from main supply voltage. Hence de-coupling cap ensures proper *local communication* while multiple Vdd & Vss lines lead to proper *global communication* avoiding voltage droop and ground bounce conditions. Step of placing **logical cell placement blockage** to avoid PnR tool to place anything.   
 
 **Characterization**
 
-Input information required by Characterization softwares are PDKs, DRC & LVS rules and spice models. The design steps of it involve *Circuit Design* and *Layout design* characterization. The software GUNA used for characterization. The characterization can be classified as Timing characterization, Power characterization and Noise characterization.
+Input information required by Characterization software’s are PDKs, DRC & LVS rules and spice models. The design steps of it involve *Circuit Design* and *Layout design* characterization. The software GUNA used for characterization. The characterization can be classified as Timing characterization, Power characterization and Noise characterization.
 
 **Characterization flow steps**
 
 * Model file of CMOS containing basic property definitions
 * Read extracted Spice Netlist
-* Recognize the behavior of cell
+* Recognize the behaviour of cell
 * Read the subcircuits
-* Attact the power sources
+* Attract the power sources
 * Apply input or stimulus
 * Provide necessary output capacitance
 * Provide necessary simulation commands
@@ -105,7 +105,7 @@ Input information required by Characterization softwares are PDKs, DRC & LVS rul
 
 # 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
 
-OpenLANE offers an interesting feature of making changes into parameters on the go. This helps to deal with issues like congestion. SPICE deck formation contains informations like components connectivity and values and information about nodes. It was showed how W/L ratio of MOS impacts its conductivity and hence reason of carefully defining W/L ratio of MOS to ensure same *rise* and *fall* delay for clock signals. CMOS robustness defined with the help of parameter that is **Switching Threshold (Vm)**. Switching threshold defined by conditions  **Vgs=Vds** and **Idsp=-Idsn**. 
+OpenLANE offers an interesting feature of making changes into parameters on the go. This helps to deal with issues like congestion. SPICE deck formation contains information like components connectivity and values and information about nodes. It was showed how W/L ratio of MOS impacts its conductivity and hence reason of carefully defining W/L ratio of MOS to ensure same *rise* and *fall* delay for clock signals. CMOS robustness defined with the help of parameter that is **Switching Threshold (Vm)**. Switching threshold defined by conditions  **Vgs=Vds** and **Idsp=-Idsn**. 
 
 **SPICE Commands
  **To include MOS**
@@ -133,7 +133,7 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 * **Nwell & Pwell formation** : Pwell uses boron and nwell uses phosphorous. Drive in diffusion by placing in high temp furnace.
 * **Creating Gate terminal** : For desired *threshold value* NA (doping Concentration) and Cox to be set.
 * **Lightly Doped Drain (LDD) formation** : LDD done to avoid *hot electron effect* and *short channel effect*.
-* **Source and Drain formation** : Forming the the source and drain.
+* **Source and Drain formation** : Forming the *: source and drain.
 * **Contacts & local interconnect Creation** : SiO2 removed using HF etch. *Titanium* deposited using sputtering.
 * **Higher Level metal layer formation** : Upper layers of metals deposited.
 
@@ -153,7 +153,7 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 
 Topic of Delay tables explored on Day 5. I learned that delay and output transition values of any particular cell are calculated with the help of values of *input transition* and *output load* values. Delay table and output transition table of a cell contain different value for each combination of input trans and output load, represented in form of lookup tables in liberty file. With the help of interpolation and extrapolation the values of point in range can also be calculated for precise result.  
 
-**Setup & Hold  Slack Analysis**
+**Setup & Hold Slack Analysis**
 * Setup and hold time define a window of time in which our data should remain unchanged for desired data transfer to take place. Factors like uncertainty and skew also play an important role in this. **Clock skew is the difference between Source Clock path and Destination Clock path**. Slack defined as difference between actual time and required time is monitored. Positive or zero Slack indicates no violation whereas negative slack value indicates violation of timing. 
 
 **Commands to change configuration variables settings**
@@ -168,7 +168,7 @@ Topic of Delay tables explored on Day 5. I learned that delay and output transit
     write_db pico1.db
     read_verilog /openLANE_flow/designs/picorv32a/runs/trial/results/synthesis/picorv32a.synthesis_cts.v
     read_liberty $::env(LIB_SYNTH_COMPLETE)
-    lik_design picorv32a
+    link_design picorv32a
     read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
     set_propagated_clock [all_clocks]
     report_checks -path_delay min_max -digits 4
@@ -224,14 +224,14 @@ These DRC rules exist because of limitations of the Lithography technique. Devia
 * **Detailed Route** : Performed using *TritonRoute*. 
 
 **Triton Route**
-It performs *initial detailed route* and tries to route within the route guide provided by fast route. It works on MILF-based panel routing with intra-layer parellel route and inter-layer sequential route technique. Input files required for triton route are LEF,DEF and preprocessed route guide. Output is in form of detailed routing with optimum wire length and Via count.
+It performs *initial detailed route* and tries to route within the route guide provided by fast route. It works on MILF-based panel routing with intra-layer parallel route and inter-layer sequential route technique. Input files required for triton route are LEF,DEF and pre-processed route guide. Output is in form of detailed routing with optimum wire length and Via count.
 
-**Steps for preprocessed route guides**
-* **Initial route guide** : Basic connectiving informatons using route guides.
+**Steps for pre-processed route guides**
+* **Initial route guide** : Basic connecting information using route guides.
 * **Splitting** : Routes in non-preferred direction are split into unit width.
 * **Merging** : Touching guides have edge orthogonal to the preferred route guide direction are merged.
 * **Bridging** : Edges parallel to preferred one are bridged using additional layers.
-* **Preprocessed Route** : Now all route guides are in preferred direction as required. 
+* **Pre-processed Route** : Now all route guides are in preferred direction as required. 
 
 # LAB
 
