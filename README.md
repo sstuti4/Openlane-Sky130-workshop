@@ -1,5 +1,5 @@
 # Openlane-Sky130-workshop
-An informative workshop on advanced Physical Design using OpenLANE/Sky130 organized by VSD Corp. It helped me gain hands-on experience of full ASIC implementation steps from RTL to GDSII using Google-Skywater's first manufacturable open source 130nm process design kit. The workshop focused on building basics by imparting exposure to conceptual as well as practical approach.Learnings: Design Exploration, Logic Equivalence Check (LEC), Antenna Diode Concept, Decoupling Cap, Pin Placement, Timing Characterization and familiarity with files like libs/db, LEF, DEF, SDC and SPEF. Tools used: Magic, ngspice, OpenSTA, TritonRoute, yosys and OpenROAD.   
+An informative workshop on advanced Physical Design using OpenLANE/Sky130 organized by VSD Corp. It helped me gain hands-on experience of full ASIC implementation steps from RTL to GDSII using Google-Skywater's first manufacturable open source 130nm process design kit. The workshop focused on building basics by imparting exposure to conceptual as well as practical approach.Learnings: Open source tools, Characterization of Cell, SPICE simulations, Static timing Anlaysis concepts, Commands of various OpenLANE tools, 16-mask CMOS Fabrication, Antenna Diode Concept, Decoupling Cap, Routing algorithm & Steps, Timing Characterization and familiarity with files like libs/db, LEF, DEF, SDC and SPEF. Tools used: Magic, ngspice, OpenSTA, TritonRoute, yosys, SPEF extractor and OpenROAD.   
 
 # Contents
 <a href="#1-Introduction-to-Openlane">1. Introduction to Openlane</a>
@@ -74,7 +74,7 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
 
-On Day 2, definition of width and height of core and die. Factors like *Utilization factor* and *Aspect ratio* important to understand a design were introduced and their effects were discussed. Steps involved to define location of **pre-placed cell**  & it's advantage of enhacing reusability and **de-coupling capacitor**  and how they help during switching to avoid failure explained. A fully charged De-coupling cap placed paralllel to circuits to ensure proper supply of peak current *Ipeak* by decoupling them from main supply voltage. Hence de-coupling cap ensures *proper local communication* while multiple Vdd & Vss lines lead to *proper global communication* avoiding voltage droop and ground bounce conditions. Step of placing *logical cell placement blockage* to avoid PnR tool to place anything.   
+On Day 2, definition of width and height of core and die. Factors like *Utilization factor* and *Aspect ratio* important to understand a design were introduced and their effects were discussed. Steps involved to define location of **pre-placed cell**  & it's advantage of enhacing reusability and **de-coupling capacitor**  and how they help during switching to avoid failure explained. A fully charged De-coupling cap placed paralllel to circuits to ensure proper supply of peak current *Ipeak* by decoupling them from main supply voltage. Hence de-coupling cap ensures proper *local communication* while multiple Vdd & Vss lines lead to proper *global communication* avoiding voltage droop and ground bounce conditions. Step of placing **logical cell placement blockage** to avoid PnR tool to place anything.   
 
 **Characterization**
 
@@ -104,7 +104,7 @@ Input information required by Characterization softwares are PDKs, DRC & LVS rul
 
 # 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
 
-OpenLANE offers an interesting feature of making changes into parameters on the go. This helps to deal with issues like congestion. SPICE deck formation contains informations like components connectivity and values and information about nodes. It was showed how W/L ratio of MOS impacts its conductivity and hence reason of carefully defining W/L ratio of MOS to ensure same *rise* and *fall* delay for clock signals. CMOS robustness defined with the help of parameters that are *Switching Threshold (Vm)*,    .Switching threshold defined by conditions  **Vgs=Vds** and **Idsp=-Idsn**. 
+OpenLANE offers an interesting feature of making changes into parameters on the go. This helps to deal with issues like congestion. SPICE deck formation contains informations like components connectivity and values and information about nodes. It was showed how W/L ratio of MOS impacts its conductivity and hence reason of carefully defining W/L ratio of MOS to ensure same *rise* and *fall* delay for clock signals. CMOS robustness defined with the help of parameter that is **Switching Threshold (Vm)**. Switching threshold defined by conditions  **Vgs=Vds** and **Idsp=-Idsn**. 
 
 **SPICE Commands
  **To include MOS**
@@ -127,14 +127,14 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 * **Propagation Delay** : Measured between 50% of Input transition to 50% of Output transition.
 
 **16-Mask CMOS Process Steps**
-* Substrate Selection
-* Create active region for transistors
-* Nwell & Pwell formation
-* Creating Gate terminal
-* Lightly Doped Drain (LDD) formation
-* Source and Drain formation
-* Contacts & local interconnect Creation
-* Higher Level metal layer formation
+* **Substrate Selection** : Selection of base layer on which other regions will be formed.
+* **Create active region for transistors** : SiO2 and si3N2 deposited. Pockets created using photoresist and lithography. 
+* **Nwell & Pwell formation** : Pwell uses boron and nwell uses phosphorous. Drive in diffusion by placing in high temp furnace.
+* **Creating Gate terminal** : For desired *threshold value* NA (doping Concentration) and Cox to be set.
+* **Lightly Doped Drain (LDD) formation** : LDD done to avoid *hot electron effect* and *short channel effect*.
+* **Source and Drain formation** : Forming the the source and drain.
+* **Contacts & local interconnect Creation** : SiO2 removed using HF etch. *Titanium* deposited using sputtering.
+* **Higher Level metal layer formation** : Upper layers of metals deposited.
 
 
 **NOTE** : The values shown are standard value and might change according to requirements. 
@@ -228,11 +228,11 @@ These DRC rules exist because of limitations of the Lithography technique. Devia
 It performs *initial detailed route* and tries to route within the route guide provided by fast route. It works on MILF-based panel routing with intra-layer parellel route and inter-layer sequential route technique. Input files required for triton route are LEF,DEF and preprocessed route guide. Output is in form of detailed routing with optimum wire length and Via count.
 
 **Steps for preprocessed route guides**
-* Initial route guide
-* Splitting
-* Merging
-* Bridging
-* Preprocessed Route
+* **Initial route guide** : Basic connectiving informatons using route guides.
+* **Splitting** : Routes in non-preferred direction are split into unit width.
+* **Merging** : Touching guides have edge orthogonal to the preferred route guide direction are merged.
+* **Bridging** : Edges parallel to preferred one are bridged using additional layers.
+* **Preprocessed Route** : Now all route guides are in preferred direction as required. 
 
 # LAB
 
