@@ -12,7 +12,7 @@ An informative workshop on advanced Physical Design using OpenLANE/Sky130 organi
 
 <a href="#5-Day-4-Timing-Analysis-using-OpenSTA-Clock-Tree-Synthesis-&-Signal-Integrity">5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity</a>
 
-<a href="6-Day-5-Routing-and-SPEF-Extraction">6. Day 5: Routing and SPEF Extraction</a>
+<a href="#6-Day-5-Routing-and-SPEF-Extraction">6. Day 5: Routing and SPEF Extraction</a>
 
 # 1. Introduction to OpenLANE
 OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, SPEF-Extractor and custom methodology scripts for design exploration and optimization. It is a tool started for true open source tape-out experience and comes with APACHE version 2.0 . The goal of OpenLANE is to produce clean GDSII without any human intervention. OpenLANE is tuned for Skywater 130nm open PDK and can be used to produce hard macros and chips.
