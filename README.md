@@ -10,7 +10,7 @@ An informative workshop on advanced Physical Design using OpenLANE/Sky130 organi
 
 <a href="#4-Day-3-Design-and-Characterization-of-cells-using-Magic-Layout-tool-and-ngspice">4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice</a>
 
-<a href="#5-Day-4-Timing-Analysis-using-OpenSTA-Clock-Tree-Synthesis-&-Signal-Integrity">5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity</a>
+<a href="#5-Day-4-Timing-Analysis-using-OpenSTA-Clock-Tree-Synthesis-and-Signal-Integrity">5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis and Signal Integrity</a>
 
 <a href="#6-Day-5-Routing-and-SPEF-Extraction">6. Day 5: Routing and SPEF Extraction</a>
 
@@ -135,7 +135,7 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 ![Screenshot (25)](https://user-images.githubusercontent.com/73339656/97114751-60770980-1718-11eb-877b-0396e38f764b.png)
 
 
-# 5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity
+# 5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis and Signal Integrity
 
 Topic of Delay tables explored on Day 5. I learned that delay and output transition values of any particular cell are calculated with the help of values of *input transition* and *output load* values. Delay table and output transition table of a cell contain different value for each combination of input trans and output load, represented in form of lookup tables in liberty file. With the help of interpolation and extrapolation the values of point in range can also be calculated for precise result.  
 
