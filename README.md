@@ -107,8 +107,7 @@ Input information required by Characterization software’s are PDKs, DRC & LVS 
 
 OpenLANE offers an interesting feature of making changes into parameters on the go. This helps to deal with issues like congestion. SPICE deck formation contains information like components connectivity and values and information about nodes. It was showed how W/L ratio of MOS impacts its conductivity and hence reason of carefully defining W/L ratio of MOS to ensure same *rise* and *fall* delay for clock signals. CMOS robustness defined with the help of parameter that is **Switching Threshold (Vm)**. Switching threshold defined by conditions  **Vgs=Vds** and **Idsp=-Idsn**. 
 
-**SPICE Commands
- **To include MOS**
+**SPICE Commands to include MOS**
            
     .include ./libs/pshort.lib
     .include ./libs/nshort.lib
