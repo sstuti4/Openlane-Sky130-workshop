@@ -2,14 +2,17 @@
 An informative workshop on advanced Physical Design using OpenLANE/Sky130 organized by VSD Corp. It helped me gain hands-on experience of full ASIC implementation steps from RTL to GDSII using Google-Skywater's first manufacturable open source 130nm process design kit. The workshop focused on building basics by imparting exposure to conceptual as well as practical approach.Learnings: Design Exploration, Logic Equivalence Check (LEC), Antenna Diode Concept, Decoupling Cap, Pin Placement, Timing Characterization and familiarity with files like libs/db, LEF, DEF, SDC and SPEF. Tools used: Magic, ngspice, OpenSTA, TritonRoute, yosys and OpenROAD.   
 
 # Contents
-<a href="#1-Introduction-to-Openlane">1. Introduction to Openlane.</a>
+<a href="#1-Introduction-to-Openlane">1. Introduction to Openlane</a>
 
-<a href="#2-Day-1-SoC-Design-and-familiarity-to-open-source-eda-tools">2. Day 1: SoC Design and familiarity to open source eda tools.</a>
+<a href="#2-Day-1-SoC-Design-and-familiarity-to-open-source-eda-tools">2. Day 1: SoC Design and familiarity to open source eda tools</a>
 
-3. Day 2: Chip floorplan and Introduction to Library Cells
-4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
-5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity
-6. Day 5: Routing and SPEF Extraction
+<a href="#3-Day-2-Chip-floorplan-and-Introduction-to-Library-Cells">3. Day 2: Chip floorplan and Introduction to Library Cells</a>
+
+<a href="#4-Day-3-Design-and-Characterization-of-cells-using-Magic-Layout-tool-and-ngspice">4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice</a>
+
+<a href="#5-Day-4-Timing-Analysis-using-OpenSTA-Clock-Tree-Synthesis-&-Signal-Integrity">5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis & Signal Integrity</a>
+
+<a href="6-Day-5-Routing-and-SPEF-Extraction">6. Day 5: Routing and SPEF Extraction</a>
 
 # 1. Introduction to OpenLANE
 OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, SPEF-Extractor and custom methodology scripts for design exploration and optimization. It is a tool started for true open source tape-out experience and comes with APACHE version 2.0 . The goal of OpenLANE is to produce clean GDSII without any human intervention. OpenLANE is tuned for Skywater 130nm open PDK and can be used to produce hard macros and chips.
