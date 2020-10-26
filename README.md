@@ -133,7 +133,7 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 * **Nwell & Pwell formation** : Pwell uses boron and nwell uses phosphorous. Drive in diffusion by placing in high temp furnace.
 * **Creating Gate terminal** : For desired *threshold value* NA (doping Concentration) and Cox to be set.
 * **Lightly Doped Drain (LDD) formation** : LDD done to avoid *hot electron effect* and *short channel effect*.
-* **Source and Drain formation** : Forming the *: source and drain.
+* **Source and Drain formation** : Forming the source and drain.
 * **Contacts & local interconnect Creation** : SiO2 removed using HF etch. *Titanium* deposited using sputtering.
 * **Higher Level metal layer formation** : Upper layers of metals deposited.
 
@@ -210,7 +210,7 @@ Topic of Delay tables explored on Day 5. I learned that delay and output transit
 
 # 6. Day 5: Routing and SPEF Extraction
 
-Routing method finds out best possible pattern for connection between two end points, of which one point is *target node* while the other is *source node*. **Maze Routing-Lee's Algorithm** was introduced. In this technique firstly routing grids are created and source & target nodes are indentified. Then the blocks adjacent to one under consideration are assigned same numbers and this process is repeated till we reach the target node. Once this done the pattern with minimum number of turns preferably a *l* spaced pattern is finalised for route. 
+Routing method finds out best possible pattern for connection between two end points, of which one point is *target node* while the other is *source node*. **Maze Routing-Lee's Algorithm** was introduced. In this technique firstly routing grids are created and source & target nodes are indentified. Then the blocks adjacent to one under consideration are assigned same numbers and this process is repeated till we reach the target node. Once this done the pattern with minimum number of turns preferably a *L* spaced pattern is finalised for route. 
 
 **Typical DRC rules for pair of wires**
 1. Wire width
