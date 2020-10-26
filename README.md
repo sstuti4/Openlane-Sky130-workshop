@@ -63,7 +63,7 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
  
  **Result of synthesis showing design components**
  
-![Screenshot (20)](https://user-images.githubusercontent.com/73339656/97091954-55ab6e80-165d-11eb-86bd-ba674f8e6b72.png)
+![synthesis_result](https://user-images.githubusercontent.com/73339656/97091954-55ab6e80-165d-11eb-86bd-ba674f8e6b72.png)
  
 
 
