@@ -134,7 +134,11 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 
 Topic of Delay tables explored on Day 5. I learned that delay and output transition values of any particular cell are calculated with the help of values of *input transition* and *output load* values. Delay table and output transition table of a cell contain different value for each combination of input trans and output load, represented in form of lookup tables in liberty file. With the help of interpolation and extrapolation the values of point in range can also be calculated for precise result.  
 
-ADD SETUP/HOLD
+**Setup & Hold  Slack Analysis**
+* Setup and hold time define a window of time in which our data should remain unchanged for desired data transfer to take place. Factors like uncertainty and skew also play an important role in this. **Clock skew is the difference between Source Clock path and Destination Clock path** Slack defined as difference between actual time and required time is monitored. Positive or zero Slack indicates no violation whereas negative slack value indicates violation of timing. 
+
+**Slack Equation**
+*Setup Slack = Data Required Ti
 
 # LAB
 
