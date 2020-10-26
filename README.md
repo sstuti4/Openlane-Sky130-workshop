@@ -69,7 +69,7 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
 
 **Slack Calculation of design**
  
- ![screenshot_1](https://user-images.githubusercontent.com/73339656/97088964-0a3f9300-1652-11eb-8ca9-6bb3c6348e0f.png)
+ ![slack_calc](https://user-images.githubusercontent.com/73339656/97088964-0a3f9300-1652-11eb-8ca9-6bb3c6348e0f.png)
    
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
@@ -95,11 +95,11 @@ Input information required by Characterization softwares are PDKs, DRC & LVS rul
 
 **Floorplan Result**
 
-![Screenshot (22)](https://user-images.githubusercontent.com/73339656/97092549-75916100-1662-11eb-984d-7ab7e8908010.png)
+![floorplan_result](https://user-images.githubusercontent.com/73339656/97092549-75916100-1662-11eb-984d-7ab7e8908010.png)
 
 **Layout of Design using Magic tool**
 
-![Screenshot (6)](https://user-images.githubusercontent.com/73339656/97092597-d1f48080-1662-11eb-9504-711b6cd864ef.png) 
+![magic_layout](https://user-images.githubusercontent.com/73339656/97092597-d1f48080-1662-11eb-9504-711b6cd864ef.png) 
 
 
 # 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
@@ -128,11 +128,11 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 
 **Layout of Inv using Magic**
 
-![Screenshot (24)](https://user-images.githubusercontent.com/73339656/97113874-1b9ca400-1713-11eb-90b8-dd0bf88f7c4a.png)
+![inv_layout](https://user-images.githubusercontent.com/73339656/97113874-1b9ca400-1713-11eb-90b8-dd0bf88f7c4a.png)
 
 **Transient Analysis Plot using ngspice**
 
-![Screenshot (25)](https://user-images.githubusercontent.com/73339656/97114751-60770980-1718-11eb-877b-0396e38f764b.png)
+![transient_analysis](https://user-images.githubusercontent.com/73339656/97114751-60770980-1718-11eb-877b-0396e38f764b.png)
 
 
 # 5. Day 4: Timing Analysis using OpenSTA, Clock Tree Synthesis and Signal Integrity
@@ -149,34 +149,34 @@ Topic of Delay tables explored on Day 5. I learned that delay and output transit
 
 **sky130_fd_sc_hd File containing layer information of Cell**
 
-![Screenshot (28)](https://user-images.githubusercontent.com/73339656/97115367-6969da00-171c-11eb-9266-37a83cfb3a83.png)
+![layer_info](https://user-images.githubusercontent.com/73339656/97115367-6969da00-171c-11eb-9266-37a83cfb3a83.png)
 
 **Steps to Convert Magic Layout in Standard Cell LEF**
 
-![Screenshot (29)](https://user-images.githubusercontent.com/73339656/97116187-9b316f80-1721-11eb-8990-ba28527dad30.png)
+![texthelper](https://user-images.githubusercontent.com/73339656/97116187-9b316f80-1721-11eb-8990-ba28527dad30.png)
 
 
-![Screenshot (30)](https://user-images.githubusercontent.com/73339656/97116190-a1bfe700-1721-11eb-8fed-9189a3a5b419.png)
+![tkcon_1](https://user-images.githubusercontent.com/73339656/97116190-a1bfe700-1721-11eb-8fed-9189a3a5b419.png)
 
 
-![Screenshot (32)](https://user-images.githubusercontent.com/73339656/97116196-a71d3180-1721-11eb-997d-7db9af28c7c4.png)
+![magic_command](https://user-images.githubusercontent.com/73339656/97116196-a71d3180-1721-11eb-997d-7db9af28c7c4.png)
 
 
-![Screenshot (33)](https://user-images.githubusercontent.com/73339656/97116200-abe1e580-1721-11eb-8aaa-a9db94561508.png)
+![tkcon_2](https://user-images.githubusercontent.com/73339656/97116200-abe1e580-1721-11eb-8aaa-a9db94561508.png)
 
 
-![Screenshot (34)](https://user-images.githubusercontent.com/73339656/97116204-b308f380-1721-11eb-926d-f383af26a949.png)
+![lef_info](https://user-images.githubusercontent.com/73339656/97116204-b308f380-1721-11eb-926d-f383af26a949.png)
 
-![Screenshot (37)](https://user-images.githubusercontent.com/73339656/97117154-e9e20800-1727-11eb-8667-babaa596cc10.png)
+![layout_1](https://user-images.githubusercontent.com/73339656/97117154-e9e20800-1727-11eb-8667-babaa596cc10.png)
 
-![Screenshot (38)](https://user-images.githubusercontent.com/73339656/97117167-f6666080-1727-11eb-9fed-aa4d1fa00399.png)
+![layout_2](https://user-images.githubusercontent.com/73339656/97117167-f6666080-1727-11eb-9fed-aa4d1fa00399.png)
 
 **CTS Step Result**
 
-![Screenshot (40)](https://user-images.githubusercontent.com/73339656/97117697-80fc8f00-172b-11eb-8982-bdce6ec6afe2.png)
+![cts_result](https://user-images.githubusercontent.com/73339656/97117697-80fc8f00-172b-11eb-8982-bdce6ec6afe2.png)
 
 **Clock Buffer List of design**
-![Screenshot (41)](https://user-images.githubusercontent.com/73339656/97117700-8659d980-172b-11eb-8aee-4cc578cf0f5e.png)
+![buf_list](https://user-images.githubusercontent.com/73339656/97117700-8659d980-172b-11eb-8aee-4cc578cf0f5e.png)
 
 
 # 6. Day 5: Routing and SPEF Extraction
@@ -208,11 +208,11 @@ It performs *initial detailed route* and tries to route within the route guide p
 
 **Routing Result of Design**
 
-![Screenshot (16)](https://user-images.githubusercontent.com/73339656/97088698-58539700-1650-11eb-9f81-d773c09df730.png)
+![routing_result](https://user-images.githubusercontent.com/73339656/97088698-58539700-1650-11eb-9f81-d773c09df730.png)
 
 **SPEF Extraction**
 
-![Screenshot (18)](https://user-images.githubusercontent.com/73339656/97091405-5a6e2380-1659-11eb-8df4-bde2e06fb572.png)
+![spef_result](https://user-images.githubusercontent.com/73339656/97091405-5a6e2380-1659-11eb-8df4-bde2e06fb572.png)
 
 # 7. Acknowledgements
   * Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
