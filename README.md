@@ -74,7 +74,7 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
 
 # 3. Day 2: Chip floorplan and Introduction to Library Cells
 
-On Day 2, definition of width and height of core and die. Factors like *Utilization factor* and *Aspect ratio* important to understand a design were introduced and their effects were discussed. Steps involved to define location of *pre-placed cell*  & it's advantage of enhacing reusability and *de-coupling capacitors*  and how they help during switching to avoid failure explained. A fully charged De-coupling cap placed paralllel to circuits to ensure proper supply of peak current *Ipeak* by decoupling them from main supply voltage. Hence de-coupling cap ensures *proper local communication* while multiple Vdd & Vss lines lead to *proper global communication* avoiding voltage droop and ground bounce conditions. Step of placing *logical cell placement blockage* to avoid PnR tool to place anything.   
+On Day 2, definition of width and height of core and die. Factors like *Utilization factor* and *Aspect ratio* important to understand a design were introduced and their effects were discussed. Steps involved to define location of **pre-placed cell**  & it's advantage of enhacing reusability and **de-coupling capacitor**  and how they help during switching to avoid failure explained. A fully charged De-coupling cap placed paralllel to circuits to ensure proper supply of peak current *Ipeak* by decoupling them from main supply voltage. Hence de-coupling cap ensures *proper local communication* while multiple Vdd & Vss lines lead to *proper global communication* avoiding voltage droop and ground bounce conditions. Step of placing *logical cell placement blockage* to avoid PnR tool to place anything.   
 
 **Characterization**
 
@@ -106,6 +106,21 @@ Input information required by Characterization softwares are PDKs, DRC & LVS rul
 
 OpenLANE offers an interesting feature of making changes into parameters on the go. This helps to deal with issues like congestion. SPICE deck formation contains informations like components connectivity and values and information about nodes. It was showed how W/L ratio of MOS impacts its conductivity and hence reason of carefully defining W/L ratio of MOS to ensure same *rise* and *fall* delay for clock signals. CMOS robustness defined with the help of parameters that are *Switching Threshold (Vm)*,    .Switching threshold defined by conditions  **Vgs=Vds** and **Idsp=-Idsn**. 
 
+**SPICE Commands
+ **To include MOS**
+           
+    .include ./libs/pshort.lib
+    .include ./libs/nshort.lib
+
+**Netlist Description of MOS**
+
+    M1 out in  VPWR VPWR pshort w=37 l=23
+    M2 out in  VGND VGND nshort w=35 l=23
+    
+**Command for Transient Analysis**
+
+    .tran 1n 20n
+            
 **Important parameters of Timing Characterization**
 * **Rise Delay** : Time taken for waveform to rise from 20% to 80% of VDD.
 * **Fall Delay** : Time taken for waveform to fall from 80% to 20% of VDD.
@@ -140,10 +155,25 @@ OpenLANE offers an interesting feature of making changes into parameters on the 
 Topic of Delay tables explored on Day 5. I learned that delay and output transition values of any particular cell are calculated with the help of values of *input transition* and *output load* values. Delay table and output transition table of a cell contain different value for each combination of input trans and output load, represented in form of lookup tables in liberty file. With the help of interpolation and extrapolation the values of point in range can also be calculated for precise result.  
 
 **Setup & Hold  Slack Analysis**
-* Setup and hold time define a window of time in which our data should remain unchanged for desired data transfer to take place. Factors like uncertainty and skew also play an important role in this. **Clock skew is the difference between Source Clock path and Destination Clock path** Slack defined as difference between actual time and required time is monitored. Positive or zero Slack indicates no violation whereas negative slack value indicates violation of timing. 
+* Setup and hold time define a window of time in which our data should remain unchanged for desired data transfer to take place. Factors like uncertainty and skew also play an important role in this. **Clock skew is the difference between Source Clock path and Destination Clock path**. Slack defined as difference between actual time and required time is monitored. Positive or zero Slack indicates no violation whereas negative slack value indicates violation of timing. 
 
-**Slack Equation**
-*Setup Slack = Data Required Ti
+**Commands to change configuration variables settings**
+   
+    set ::env(SYNTH_STRATEGY) 1
+    set ::env(SYNTH_SIZING) 1
+ 
+ **OpenROAD Commands**
+ 
+    read_lef /openLANE_flow/designs/picorv32a/runs/trial/tmp/merged.lef
+    read_def /openLANE_flow/designs/picorv32a/runs/trial/results/cts/picorv32a.cts.def
+    write_db pico1.db
+    read_verilog /openLANE_flow/designs/picorv32a/runs/trial/results/synthesis/picorv32a.synthesis_cts.v
+    read_liberty $::env(LIB_SYNTH_COMPLETE)
+    lik_design picorv32a
+    read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+    set_propagated_clock [all_clocks]
+    report_checks -path_delay min_max -digits 4
+
 
 # LAB
 
