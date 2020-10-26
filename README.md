@@ -2,7 +2,7 @@
 An informative workshop on advanced Physical Design using OpenLANE/Sky130 organized by VSD Corp. It helped me gain hands-on experience of full ASIC implementation steps from RTL to GDSII using Google-Skywater's first manufacturable open source 130nm process design kit. The workshop focused on building basics by imparting exposure to conceptual as well as practical approach.Learnings: Design Exploration, Logic Equivalence Check (LEC), Antenna Diode Concept, Decoupling Cap, Pin Placement, Timing Characterization and familiarity with files like libs/db, LEF, DEF, SDC and SPEF. Tools used: Magic, ngspice, OpenSTA, TritonRoute, yosys and OpenROAD.   
 
 # Contents
-1. Introduction to Openlane
+<a href="#1-Introduction-to-Openlane">Introduction to Openlane</a>
 2. Day 1: SoC Design and familiarity to open source eda tools
 3. Day 2: Chip floorplan and Introduction to Library Cells
 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
