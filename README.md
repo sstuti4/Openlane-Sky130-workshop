@@ -57,7 +57,7 @@ Day 1 started with basic introduction to *System On Chip* and *RISC-V Instructio
    **To run OpenLANE**
    
    
-![Screenshot (19)](https://user-images.githubusercontent.com/73339656/97091831-5e4f7500-165c-11eb-9f42-7883403cfcf4.png)
+![openlane_run](https://user-images.githubusercontent.com/73339656/97091831-5e4f7500-165c-11eb-9f42-7883403cfcf4.png)
 
  
  
