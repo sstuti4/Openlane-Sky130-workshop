@@ -4,7 +4,7 @@ An informative workshop on advanced Physical Design using OpenLANE/Sky130 organi
 # Contents
 <a href="#1-Introduction-to-Openlane">1. Introduction to Openlane</a>
 
-<a href="#2-Day-1:-SoC-Design-and-familiarity-to-open-source-eda-tools">2. Day 1: SoC Design and familiarity to open source eda tools</a>
+<a href="#2-Day-1-SoC-Design-and-familiarity-to-open-source-eda-tools">2. Day 1: SoC Design and familiarity to open source eda tools</a>
 
 3. Day 2: Chip floorplan and Introduction to Library Cells
 4. Day 3: Design and Characterization of cells using Magic Layout tool and ngspice
